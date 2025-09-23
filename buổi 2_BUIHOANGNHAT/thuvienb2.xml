@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "thuvienb2.dtd">
+<library>
+    <book id="B001">
+        <title>Lập trình C++</title>
+        <author>Nguyễn Văn An</author>
+        <year>2021</year>
+        <genre>Công nghệ</genre>
+    </book>
+    <book id="B002">
+        <title>Cơ sở dữ liệu</title>
+        <author>Trần Thị Hoa</author>
+        <year>2020</year>
+        <genre>Giáo trình</genre>
+    </book>
+    <book id="B003">
+        <title>Kinh tế học</title>
+        <author>Lê Văn Nam</author>
+        <year>2019</year>
+        <genre>Kinh tế</genre>
+    </book>
+</library>

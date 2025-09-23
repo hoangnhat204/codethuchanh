@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "khoahoc.dtd">
+<orders>
+    <order id="O001" customer="Nguyễn Văn A" date="2025-03-02">
+        <item id="P001" quantity="2" price="500">
+            <name>Điện thoại Samsung</name>
+        </item>
+        <item id="P002" quantity="1" price="1000">
+            <name>Laptop Dell</name>
+        </item>
+    </order>
+
+    <order id="O002" customer="Trần Thị B" date="2025-03-05">
+        <item id="P003" quantity="3" price="200">
+            <name>Tai nghe</name>
+        </item>
+        <item id="P004" quantity="1" price="700">
+            <name>Tablet Sony</name>
+        </item>
+    </order>
+</orders>
