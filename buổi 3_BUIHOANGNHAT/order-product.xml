@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="order-product_bai1_3_buoi2.xsd">
+
+  <order id="0001">
+    <product id="P001">
+      <name>Áo sơ mi nam</name>
+      <quantity>2</quantity>
+    </product>
+    <product id="P002">
+      <name>Quần tây</name>
+      <quantity>1</quantity>
+    </product>
+  </order>
+
+  <order id="0002">
+    <product id="P003">
+      <name>Giày thể thao</name>
+      <quantity>1</quantity>
+    </product>
+    <product id="P004">
+      <name>Balo laptop</name>
+      <quantity>2</quantity>
+    </product>
+    <product id="P005">
+      <name>Áo khoác</name>
+      <quantity>1</quantity>
+    </product>
+  </order>
+
+</orders>
