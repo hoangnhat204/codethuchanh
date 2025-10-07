@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Định nghĩa kiểu dữ liệu dùng chung -->
+    <xs:simpleType name="maType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tenType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="sdtType">
+        <xs:restriction base="xs:string">
+            <!-- Bắt đầu bằng 0 và theo sau là 9 chữ số -->
+            <xs:pattern value="0\d{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tenKhoaType">
+        <xs:restriction base="xs:string">
+            <!-- Chỉ chứa các ký tự a-z -->
+            <xs:pattern value="[a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Định nghĩa phần tử chính -->
+    <xs:element name="DSSV">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KHOA" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MAKHOA" type="maType"/>
+                            <xs:element name="TENKHOA" type="tenKhoaType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="LOP" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MALOP" type="maType"/>
+                            <xs:element name="TENLOP" type="tenType"/>
+                            <xs:element name="MAKHOA" type="maType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="SINHVIEN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MASV" type="maType"/>
+                            <xs:element name="HOSV" type="tenType"/>
+                            <xs:element name="TENSV" type="tenType"/>
+                            <xs:element name="SDT" type="sdtType"/>
+                            <xs:element name="MALOP" type="maType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Khóa chính -->
+        <xs:key name="khoa_pk">
+            <xs:selector xpath="KHOA"/>
+            <xs:field xpath="MAKHOA"/>
+        </xs:key>
+
+        <xs:key name="lop_pk">
+            <xs:selector xpath="LOP"/>
+            <xs:field xpath="MALOP"/>
+        </xs:key>
+
+        <xs:key name="sv_pk">
+            <xs:selector xpath="SINHVIEN"/>
+            <xs:field xpath="MASV"/>
+        </xs:key>
+
+        <!-- Khóa ngoại -->
+        <xs:keyref name="lop_fk_khoa" refer="khoa_pk">
+            <xs:selector xpath="LOP"/>
+            <xs:field xpath="MAKHOA"/>
+        </xs:keyref>
+
+        <xs:keyref name="sv_fk_lop" refer="lop_pk">
+            <xs:selector xpath="SINHVIEN"/>
+            <xs:field xpath="MALOP"/>
+        </xs:keyref>
+
+    </xs:element>
+</xs:schema>
