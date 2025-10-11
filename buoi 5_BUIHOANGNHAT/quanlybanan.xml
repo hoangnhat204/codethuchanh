@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurant>
+  <tables>
+    <table id="B01" number="1"/>
+    <table id="B02" number="2"/>
+    <table id="B03" number="3"/>
+  </tables>
+
+  <employees>
+    <employee id="NV01" gender="Nam">
+      <name>Phạm Văn An</name>
+      <phone>0909123456</phone>
+    </employee>
+    <employee id="NV02" gender="Nữ">
+      <name>Nguyễn Thị Bình</name>
+      <phone>0909678901</phone>
+    </employee>
+    <employee id="NV03" gender="Nữ">
+      <name>Trần Mỹ Linh</name>
+      <phone>0933332222</phone>
+    </employee>
+  </employees>
+
+  <menu>
+    <dish id="M01" name="Cơm chiên" price="45000"/>
+    <dish id="M02" name="Lẩu thái" price="60000"/>
+    <dish id="M03" name="Gỏi cuốn" price="30000"/>
+  </menu>
+
+  <bills>
+    <bill id="HD01" tableRef="B01" employeeRef="NV01" date="2024-03-01">
+      <item dishRef="M01"/>
+      <item dishRef="M02"/>
+    </bill>
+    <bill id="HD02" tableRef="B02" employeeRef="NV02" date="2024-03-05">
+      <item dishRef="M02"/>
+      <item dishRef="M03"/>
+    </bill>
+    <bill id="HD03" tableRef="B03" employeeRef="NV03" date="2024-03-10">
+      <item dishRef="M01"/>
+      <item dishRef="M01"/>
+    </bill>
+  </bills>
+</restaurant>
