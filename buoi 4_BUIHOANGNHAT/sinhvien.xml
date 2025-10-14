@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Định nghĩa kiểu dữ liệu dùng chung -->
+  <xs:simpleType name="maType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tenType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sdtType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="0[0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tenKhoaType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="DSSV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="KHOA" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAKHOA" type="maType"/>
+              <xs:element name="TENKHOA" type="tenKhoaType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="LOP" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MALOP" type="maType"/>
+              <xs:element name="TENLOP" type="tenType"/>
+              <xs:element name="MAKHOA" type="maType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="SINHVIEN" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASV" type="maType"/>
+              <xs:element name="HOTEN" type="tenType"/>
+              <xs:element name="SDT" type="sdtType"/>
+              <xs:element name="MALOP" type="maType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Ràng buộc khóa -->
+    <xs:key name="KhoaPK">
+      <xs:selector xpath="KHOA"/>
+      <xs:field xpath="MAKHOA"/>
+    </xs:key>
+
+    <xs:key name="LopPK">
+      <xs:selector xpath="LOP"/>
+      <xs:field xpath="MALOP"/>
+    </xs:key>
+
+    <xs:keyref name="LopKhoaFK" refer="KhoaPK">
+      <xs:selector xpath="LOP"/>
+      <xs:field xpath="MAKHOA"/>
+    </xs:keyref>
+
+    <xs:keyref name="SVLopFK" refer="LopPK">
+      <xs:selector xpath="SINHVIEN"/>
+      <xs:field xpath="MALOP"/>
+    </xs:keyref>
+  </xs:element>
+
+</xs:schema>

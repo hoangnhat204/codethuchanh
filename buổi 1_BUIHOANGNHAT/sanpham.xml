@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE store SYSTEM "sanpham.dtd">
+<store>
+    <product id="P001" category="Điện tử" price="120000" currency="VND"/>
+    <product id="P002" category="Thời trang" price="500000" currency="VND"/>
+    <product id="P003" category="Gia dụng" price="300000" currency="VND"/>
+</store>

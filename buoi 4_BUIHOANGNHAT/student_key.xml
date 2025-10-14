@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSSV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="student_key.xsd">
+    <KHOA>
+        <MAKHOA>K001</MAKHOA>
+        <TENKHOA>cntt</TENKHOA>
+    </KHOA>
+    <KHOA>
+        <MAKHOA>K002</MAKHOA>
+        <TENKHOA>qtkd</TENKHOA>
+    </KHOA>
+    <LOP>
+        <MALOP>L001</MALOP>
+        <TENLOP>CTK45A</TENLOP>
+        <MAKHOA>K001</MAKHOA>
+    </LOP>
+    <LOP>
+        <MALOP>L002</MALOP>
+        <TENLOP>QTK46B</TENLOP>
+        <MAKHOA>K002</MAKHOA>
+    </LOP>
+    <SINHVIEN>
+        <MASV>SV001</MASV>
+        <HOSV>Nguyen Van</HOSV>
+        <TENSV>A</TENSV>
+        <SDT>0912345678</SDT>
+        <MALOP>L001</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV002</MASV>
+        <HOSV>Tran Thi</HOSV>
+        <TENSV>B</TENSV>
+        <SDT>0987654321</SDT>
+        <MALOP>L001</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MASV>SV003</MASV>
+        <HOSV>Le Van</HOSV>
+        <TENSV>C</TENSV>
+        <SDT>0901112233</SDT>
+        <MALOP>L002</MALOP>
+    </SINHVIEN>
+</DSSV>

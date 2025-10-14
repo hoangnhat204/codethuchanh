@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE thuvien SYSTEM "thuvien.dtd">
+<thuvien>
+    <sach>
+        <title>Lập Trình Python</title>
+        <author>Đoàn Minh Phụng</author>
+        <year>2020</year>
+        <genre>Tin học - CNTT</genre>
+    </sach>
+    <sach>
+        <title>Cơ Sở Dữ Liệu</title>
+        <author>Nguyễn Văn Vỵ</author>
+        <year>2005</year>
+        <genre>Giáo trình đại học</genre>
+    </sach>
+    <sach>
+        <title>Giáo trình Lập trình C#</title>
+        <author>TS. Nguyễn Văn Vỵ</author>
+        <year>2012</year>
+        <genre>Giáo trình đại học, lập trình ứng dụng</genre>
+    </sach>
+</thuvien>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders SYSTEM "donhangb2.dtd">
+<orders>
+    <order id="O001">
+        <product id="P001">
+            <name>Điện thoại</name>
+            <quantity>2</quantity>
+        </product>
+        <product id="P002">
+            <name>Laptop</name>
+            <quantity>1</quantity>
+        </product>
+    </order>
+
+    <order id="O002">
+        <product id="P003">
+            <name>Tai nghe</name>
+            <quantity>3</quantity>
+        </product>
+        <product id="P004">
+            <name>Bàn phím</name>
+            <quantity>2</quantity>
+        </product>
+    </order>
+</orders>

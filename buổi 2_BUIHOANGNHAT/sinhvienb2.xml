@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "sinhvienb2.dtd">
+<students>
+    <student id="S001">
+        <name>Nguyễn Văn An</name>
+        <dob>2002-05-10</dob>
+        <major>Công nghệ thông tin</major>
+    </student>
+    <student id="S002">
+        <name>Trần Thị Bé</name>
+        <dob>2001-10-20</dob>
+        <major>Kinh tế</major>
+    </student>
+</students>

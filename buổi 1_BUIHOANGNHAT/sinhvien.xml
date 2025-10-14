@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class SYSTEM "sinhvien.dtd">
+<class>
+    <student>
+        <name>Tô Như Quỳnh</name>
+        <id>SV001</id>
+        <subjects>
+            <subject>
+                <subject_name>Cơ sở dữ liệu</subject_name>
+                <score>8.5</score>
+            </subject>
+            <subject>
+                <subject_name>Lập trình</subject_name>
+                <score>9.0</score>
+            </subject>
+        </subjects>
+    </student>
+
+    <student>
+        <name>Trần Thị Anh Thư</name>
+        <id>SV002</id>
+        <subjects>
+            <subject>
+                <subject_name>Lập trình</subject_name>
+                <score>7.5</score>
+            </subject>
+            <subject>
+                <subject_name>Cơ sở dữ liệu</subject_name>
+                <score>8.0</score>
+            </subject>
+        </subjects>
+    </student>
+</class>
